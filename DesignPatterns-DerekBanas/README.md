@@ -1,84 +1,71 @@
 The entire set of Videos can be found at https://www.youtube.com/playlist?list=PLF206E906175C7E07
 
- !
-methods that don’t work.!
-!
-DESIGN PATTERNS!
-What is a Class?!
+# DESIGN PATTERNS!
+### What is a Class?!
 It is a blueprint. Composed of fields (Instance variables), that is, what an object knows
 and methods, that is, what an object does.!
-!
-Inheritance:!
+
+### Inheritance
 What do classes have in common? Abstract out those features. Override or extend
 Is A? versus Has A?!
 Is A helps you decide if a class should extend another.! Has A helps you decide if something is a field.!
-!
-When to use inheritance?!
-The subclass is a superclass. For example, “Dog is an Animal”!
-When a subclass needs most of the methods in a superclass.!
-Don’t use inheritance just to reuse code, or they don’t have a IS A relationship.! Helps us Avoid duplicate code.!
-Changes to superclass code is instantly reflected in all subclasses.!
-!•!
-!•!
-!•!
-!•!
-!•!
-!•!
-!
-What is Polymorphism?!
-!•! Polymorphism allows you to write methods that don’t need to change if new
-User knows that all subclasses have all of the methods of the superclass.!
-subclasses are created. For example, Dog can add a new method without changing
-Animal. Dog can also override a method, without affecting Animal.!
-!•! You can put different subclasses in one array.!
-!•! !
-!•! You cannot call a non-static method or member inside a static method.!
-!•! You cannot call a private method even if you define it inside a subclass;! !
-What is an Abstract Class?!
-!•! If you want the power of polymorphism without the work.!
-!•! abstract public class Creature!
-!•! public abstract void setName();!
-!•! There are no abstract fields!
-!•! All methods don’t have to be abstract!
-!•! You can have static methods.!
-!•! You cannot create objects from a class marked as abstract.! !
-What is an Interface?!
-!•! A class with only abstract methods!
-!•! You can add as many interfaces to class using implements as you want.!
-!•! You can only use public static and final fields!
-!•! Interfaces provide the ultimate in flexibility!
-!•! Classes from different inheritance trees can use a common interface! !
-!
-!
-!
-!
 
- STRATEGY PATTERN!
+### When to use inheritance?
+- The subclass is a superclass. For example, “Dog is an Animal”
+- When a subclass needs most of the methods in a superclass.
+- Don’t use inheritance just to reuse code, or they don’t have a IS A relationship.
+- Helps us Avoid duplicate code.
+- Changes to superclass code is instantly reflected in all subclasses.
+- User knows that all subclasses have all of the methods of the superclass.
+
+### What is Polymorphism?
+- Polymorphism allows you to write methods that don’t need to change if new subclasses are created. For example, Dog can add a new method without changing Animal. Dog can also override a method, without affecting Animal.
+- You can put different subclasses in one array.
+- You cannot call a non-static method or member inside a static method.
+- You cannot call a private method even if you define it inside a subclass
+  
+### What is an Abstract Class?
+- If you want the power of polymorphism without the work.
+<pre><code>abstract public class Creature {
+    public abstract void setName();
+}</code></pre>
+- There are no abstract fields
+- All methods don’t have to be abstract
+- You can have static methods.
+- You cannot create objects from a class marked as abstract.
+  
+### What is an Interface?!
+- A class with only abstract methods
+- You can add as many interfaces to class using implements as you want.
+- You can only use public static and final fields
+- Interfaces provide the ultimate in flexibility
+- Classes from different inheritance trees can use a common interface
+
+
+## STRATEGY PATTERN!
 You use this pattern if you need to dynamically change an algorithm used by an object at run time.
 You basically define a family of algorithms, encapsulate each one, and make them interchangeable.
-!
+
 When to use the Strategy Pattern
-* When you want to define a class that will have one behaviour that is similar
-to other behaviours in a list.
+* When you want to define a class that will have one behaviour that is similar to other behaviours in a list.
 * When you need to use one of several behaviours dynamically.
- !
-OBSERVER DESIGN PATTERN!
-The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.!
-Using threads with observer pattern is pretty common.!
-!
- 
- !
+
+<img src="images/StrategyPattern.png width=700 />
+
+## OBSERVER DESIGN PATTERN
+The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods.
+
+Using threads with observer pattern is pretty common.
+
+ <img src="images/ObserverPattern.png width=700 />
+
 When you need many objects to receive an update when another object changes.! Typically a Publisher-Subscriber model.!
-Benefit - Loose coupling!
-!
-!
-!
-The publisher doesn’t need to know anything about the subscribers.! Negatives: The publisher may send updates that don’t matter to the
-!
-!
-observer(subscriber)!
-!
-FACTORY DESIGN PATTERN!
+Benefit - Loose coupling
+
+The publisher doesn’t need to know anything about the subscribers.! Negatives: The publisher may send updates that don’t matter to the observer(subscriber)!
+
+
+## FACTORY DESIGN PATTERN!
 You use the Factory design pattern when you want to define the class of an object at runtime. It also allows you to encapsulate object creation so that you can keep all object creation code in one place.
 !
 When a method returns one of several possible classes that share a common super class. The class is chosen at run time
