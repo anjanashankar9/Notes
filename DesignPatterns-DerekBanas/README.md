@@ -72,53 +72,40 @@ When a method returns one of several possible classes that share a common super 
 
 <img src="images/FactoryPattern.png" width=700 />
  
-ABSTRACT FACTORY DESIGN PATTERN
 
-It is like a factory, but everything is encapsulated The method that orders the object
-The factories that build the object
-The final objects
+## ABSTRACT FACTORY PATTERN
 
+It is like a factory, but everything is encapsulated.
+- The method that orders the object
+- The factories that build the object
+- The final objects
+- The final objects contain objects that use the Strategy Pattern
 
-
-
-The final objects contain objects that use the Strategy Pattern
-
-Composition: Object class fields are objects
-Allows you to create families of related objects without specifying a concrete class. Use when you have many objects that can be added, or changed dynamically
-
-
-
-during runtime
+**Composition:** Object class fields are objects
+Allows you to create families of related objects without specifying a concrete class. 
+Use when you have many objects that can be added, or changed dynamically during runtime
 You can model anything you can imagine and have those objects interact through common interfaces
 
+**The BAD:** Things can get complicated
 
-The BAD : Things can get complicated
+## SINGLETON PATTERN
 
- SINGLETON PATTERN
+It is used when you want to eliminate the option of instantiating more than one object. Potential example : Scrabble
+- Each player will share the same potential letter list.
+- Each player has their own set of letters.
+**Threads can wreak havoc with singleton and hence we need to have synchronised.**
 
-It is used when you want to eliminate the option of instantiating more than one Potential example : Scrabble
-object. 
+<img src="images/FactoryPattern.png" width=700 />
 
-
-Each player will share the same potential letter list.
-
-Each player has their own set of letters.
-Threads can wreak havoc with singleton and hence we need to have synchronised.
-
-
-
- BUILDER PATTERN
- Pattern used to create objects made from a bunch of other objects.
-
- 
+## BUILDER PATTERN
+Pattern used to create objects made from a bunch of other objects. 
 When you want to build an object made up from other objects.
 When you want the creation of these parts to be independent of the main object. Hide the creation of the parts from the client so both aren’t dependent.
 The builder knows the specifics and nobody else does.
 
+<img src="images/BuilderPattern.png" width=700 />
 
-
-
-PROTOTYPE PATTERN
+## PROTOTYPE PATTERN
 
 Creating new object (instances) by cloning (copying) other objects.
 Allows for adding of any subclass instance of a known super class at runtime When there are numerous potential classes that you want to only use if needed at
@@ -143,7 +130,7 @@ Greatest thing about Java reflection
 “methodToExecute” passed as a string “methodToExecute”(int var1, String var2)
 
 
-DECORATOR PATTERN
+## DECORATOR PATTERN
 
 Decorator allows you to modify an object dynamically.
 You would use it when you want the capabilities of inheritance with subclasses, but you need to add functionality at run time.
@@ -156,7 +143,7 @@ Simplifies code because you add functionality using many simple classes
  
 Rather than rewrite old code you can extend with new code.
  
-COMMAND DESIGN PATTERN
+## COMMAND PATTERN
 The command pattern is a behavioural design pattern in which an object is used to represent and encapsulate all the information needed to call a method at a later time.
 
 This information includes the method name, the object that owns the method and values for the method parameters.
@@ -179,7 +166,7 @@ Negative:
  
 You create many small classes that store lists of commands.
  
-ADAPTER DESIGN PATTERN
+## ADAPTER PATTERN
 
 Allows 2 completely incompatible interfaces to work together.
 Used when the client expects a (target) interface
@@ -188,7 +175,7 @@ The Adapter class allows the use of the available interface and the target inter
 
 
 must implement every method defined by the shared interface.
- FACADE DESIGN PATTERN
+## FACADE PATTERN
 When you create a simplified interface that performs many other actions behind the scenes.
 
 
@@ -206,7 +193,7 @@ Make changes accordingly
 
 
  
-BRIDGE DESIGN PATTERN
+## BRIDGE PATTERN
 Progressively adding functionality while separating out major differences using abstract classes.
 
  When to use?
@@ -223,7 +210,8 @@ will be defined (Abstract Remote)
 The concrete remote defines the abstract methods required.
 
 You basically create two layers of abstraction. 
-TEMPLATE METHOD DESIGN PATTERN
+
+## TEMPLATE METHOD PATTERN
 Used to create a group of subclasses that have to execute a similar group of methods.
 
 
@@ -234,7 +222,7 @@ You create an abstract class that contains a method called the template method.
 
 The subclass objects can override some of the method calls.
 
-ITERATOR DESIGN PATTERN
+## ITERATOR PATTERN
 The Iterator pattern provides you with a uniform way to access different collections of objects.
 
 If you get an Array,ArrayList and Hashtable of objects, you pop out an iterator for each and treat the same.
@@ -243,7 +231,7 @@ If you get an Array,ArrayList and Hashtable of objects, you pop out an iterator 
 This provides a uniform way to cycle through different collections 
 You can also write polymorphic code because you can refer to each collection of objects because they’ll implement the same interface
 
-COMPOSITE DESIGN PATTERN
+## COMPOSITE PATTERN
 
 
 Allows you to treat individual objects and compositions of objects uniformly. They allow you to represent part-whole hierarchies
@@ -255,7 +243,7 @@ You can structure data, or represent the inner working of every part of a whole
 
 object individually.
  
-FLYWEIGHT DESIGN PATTERN
+## FLYWEIGHT PATTERN
 
 Used when you need to create a large number of similar objects.
 To reduce memory usage you share objects that are similar in some way rather than creating new ones
@@ -267,7 +255,7 @@ Intrinsic State: Color Extrinsic State: Size
 
 
 
- STATE DESIGN PATTERN
+## STATE PATTERN
 Allows an object to alter its behaviour when its internal state changes. The object will appear to change its class.
 
 Context (Account): Maintains an instance of a concrete state subclass that defines the current state.
@@ -277,7 +265,7 @@ State: Defines an interface for encapsulating the behaviour associated with a pa
 Concrete State: Each subclass implements a behaviour associated with a state of context
 
  
-PROXY DESIGN PATTERN
+## PROXY PATTERN
 
 Provide a class which will limit access to another class
 You may do this for security reasons, because an object is intensive to create, or is accessed from a remote location
@@ -287,7 +275,7 @@ You may do this for security reasons, because an object is intensive to create, 
 
 
 
- CHAIN OF RESPONSIBILITY DESIGN PATTERN
+## CHAIN OF RESPONSIBILITY PATTERN
 This pattern sends data to an object and if that object can’t use it, it sends it to any number of other objects that may be able to use it.
 
 
@@ -295,7 +283,7 @@ Create 4 objects that can either add, subtract, multiply or divide
 Send 2 numbers and a command and allow these 4 objects to decide which can handle the requested calculation.
 
  
-INTERPRETER DESIGN PATTERN
+## INTERPRETER PATTERN
 
 The interpreter pattern is normally ignored.
 This pattern is almost never used.
@@ -305,7 +293,7 @@ I find it to be extremely useful if combined with Java Reflection techniques. It
 
  
 
-MEDIATOR DESIGN PATTERN
+## MEDIATOR PATTERN
 
 It is used to handle communication between related objects (Colleagues)
 All communication is handled by the mediator and the colleagues don’t need to know anything about each other.
@@ -315,7 +303,7 @@ All communication is handled by the mediator and the colleagues don’t need to 
 
  
 
-MEMENTO DESIGN PATTERN
+## MEMENTO PATTERN
 
 A way to store previous states of an object easily
 Memento: The basic object that is stored in different states
@@ -331,7 +319,7 @@ Caretaker: Holds an array list that contains all previous versions of the mement
 
 
 
- VISITOR DESIGN PATTERN
+## VISITOR PATTERN
 Allows you to add methods to classes of different types without much altering to those classes.
 
 
