@@ -22,6 +22,8 @@ This keyword ensures that
 * only a single thread can execute the block of code at the same time.
 * each thread entering the block sees the effects of all previous modifications that were guarded by the same lock.
 
+<a href="Concurrency-Vogella/src/main/java/CrawledSites.java">Code</a>
+
 ### Volatile Keyword
 
 If a variable is declared with the volatile keyword then it is guaranteed that any thread that reads the field will see the most recent change. 
@@ -37,7 +39,24 @@ For all mutable fields e.g Arrays that are passed from the outside to the class 
 ### Defensive copies
 To protect your class against change in data in an unexpected way, always copy data that you receive and only return copies of data to calling code.
 
-<a href="Java-Concurrency/Concurrency-Vogella/src/main/java/MyList.java">Code</a>
+<a href="Concurrency-Vogella/src/main/java/MyList.java">Code</a>
 
 ### Threads in Java
-The base means for 
+The base means for concurrency is the java.lang.Thread class. 
+A thread executes an object of type java.lang.Runnable
+
+Runnable is an interface which defines the run() method.
+This method is called by the Thread object and contains the work which should be done
+
+<a href="Concurrency-Vogella/src/main/java/MyRunnable.java">Code</a>
+
+Using the Thread class directly has the following disadvantages:
+1. Creating a new thread causes performance overhead.
+2. Too many threads can lead to reduced performance, as the CPU needs to switch between these threads.
+3. You cannot easily control the number of threads, therefore you may run into out of memory errors due to too many threads.
+
+**The `java.util.concurrent` package offers improved support for concurrency compared to the direct usage of `Threads`.
+This package is described in the next section.**
+
+### Thread Pools with the Executor Framework
+Thread pools manage a pool of worker threads. The thread pools contain a work queue which holds the tasks waiting to get executed.
