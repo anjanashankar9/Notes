@@ -37,7 +37,7 @@ For all mutable fields e.g Arrays that are passed from the outside to the class 
 ### Defensive copies
 To protect your class against change in data in an unexpected way, always copy data that you receive and only return copies of data to calling code.
 
-<a href="Java-Concurrency/Concurrency-Vogella/src/main/java/MyList.java"/>
+<a href="Java-Concurrency/Concurrency-Vogella/src/main/java/MyList.java">Code</a>
 
 ### Threads in Java
 The base means for 
