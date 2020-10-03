@@ -60,3 +60,30 @@ This package is described in the next section.**
 
 ### Thread Pools with the Executor Framework
 Thread pools manage a pool of worker threads. The thread pools contain a work queue which holds the tasks waiting to get executed.
+
+<a href="Concurrency-Vogella/src/main/java/ExampleExecutor.java">Code</a>
+
+### Completable Future
+Any time consuming task should be preferably done asynchronously. 
+Two basic approaches for this that are available in java are :
+1. application logic blocks until a task completes.
+2. application logic is called once the task completes, i.e, a nonblocking approach.
+
+CompletableFuture that extends Future interface supports async calls. 
+It implements the CompletionStage interface. This interface offers methods that lets you attach callbacks that will 
+be executed on completion.
+
+CompletableFuture supports both blocking and non blocking approaches, including regular callbacks.
+This callback can be executed in another thread as the thread in which the CompletableFuture is executed.
+
+Creating a basic CompletableFuture
+<br>
+
+`CompletableFuture.supplyAsync(this::doSomething)`<br>
+This runs the task asynchronously on the default thread pool of java.
+It has the option to supply your custom executor to define ThreadPool.
+
+<a href="Concurrency-Vogella/src/main/java/ExampleCompletableFuture.java">Code</a>
+
+The `thenApply` can be used to define a callback which is executed once the `CompletableFuture.supplyAsync` finishes.
+
