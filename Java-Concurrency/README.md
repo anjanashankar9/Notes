@@ -87,3 +87,13 @@ It has the option to supply your custom executor to define ThreadPool.
 
 The `thenApply` can be used to define a callback which is executed once the `CompletableFuture.supplyAsync` finishes.
 
+<a href="Concurrency-Vogella/src/main/java/ExampleCompletableFutureThenApply.java">Code</a>
+
+You can also start a CompletableFuture delayed as of Java9.
+<a href="Concurrency-Vogella/src/main/java/ExampleCompletableFutureDelayed.java">Code</a>
+
+### Non-Blocking Algorithms
+Non blocking algorithms are typically faster than blocking algorithms, 
+as the synchronization of threads appear on a much finer level (hardware).
+
+ <a href="Concurrency-Vogella/src/main/java/ExampleCompletableFutureThenApply.java">Code</a>

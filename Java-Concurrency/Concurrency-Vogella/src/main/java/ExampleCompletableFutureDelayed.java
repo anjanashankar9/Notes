@@ -1,11 +1,12 @@
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author Anjana Shankar
  * @Created 2020-10-01
  */
-public class ExampleCompletableFutureThenApply {
+public class ExampleCompletableFutureDelayed {
     public static void main(String[] args) {
         long started = System.currentTimeMillis();
 
@@ -24,15 +25,12 @@ public class ExampleCompletableFutureThenApply {
     }
 
     private static CompletableFuture<Integer> createCompletableFuture() {
-        CompletableFuture<Integer> futureCount = CompletableFuture
-                .supplyAsync(
-                        () -> {
-                            try {
-                                Thread.sleep(5000);
-                            } catch (InterruptedException e) { }
-                            return 20;
-                        }
-                );
-        return futureCount;
+        CompletableFuture<Integer> future = new CompletableFuture<>();
+        future.completeAsync(() -> {
+            System.out.println("inside future: processing data...");
+            return 1;
+        }, CompletableFuture.delayedExecutor(3, TimeUnit.SECONDS))
+        .thenAccept(result -> System.out.println("accept: "+result));
+        return future;
     }
 }
