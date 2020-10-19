@@ -118,7 +118,7 @@ Creating new object (instances) by cloning (copying) other objects.
 Allows for adding of any subclass instance of a known super class at runtime When there are numerous potential classes that you want to only use if needed at runtime.
 Reduces the need for creating subclasses.
  
-**JAVA REFLECTION API**
+## JAVA REFLECTION API
 - Class Manipulator
 - Used to manipulate classes and everything in a class
 - Can slow down a program because the JVM can’t optimise the code Cant be used with applets
