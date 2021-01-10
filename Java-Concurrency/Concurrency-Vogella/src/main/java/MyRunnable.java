@@ -33,6 +33,10 @@ public class MyRunnable {
             worker.setName(String.valueOf(i));
             threads.add(worker);
         }
+        
+        for(Thread t: threads) {
+            t.start();
+        }
 
         int running = 0;
         do {
