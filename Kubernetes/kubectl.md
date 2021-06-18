@@ -93,3 +93,37 @@ Deleting a Namespace
 Deleting (almost) all resources in a namespace
 
     $ kubectl delete all --all
+
+
+### Replication Controllers
+
+    $ kubectl get rc
+    $ kubectl get replicationcontroller
+
+    $ kubectl describe rc <rc_name>
+
+##### Scaling up the Replication Controller
+
+    $ kubectl scale rc kubia --replicas=10
+
+##### Deleting a ReplicationController
+
+Without deleting the associated pods
+
+    $ kubectl delete rc kubia --cascade=false
+
+
+### ReplicaSets
+
+    $ kubectl get rs
+    $ kubectl get replicaset
+
+### DaemonSets
+
+    $ kubectl get ds
+
+### Job resource
+
+    $ kubectl get jobs
+    
+    
