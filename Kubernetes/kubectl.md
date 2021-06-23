@@ -128,5 +128,4 @@ Without deleting the associated pods
     
 ### Changing Namespace in the context for all subsequent requests
 
-    $ kubectl config set-context --current 
---namespace=<insert-namespace-name-here>
+    $ kubectl config set-context --current --namespace=<insert-namespace-name-here>
