@@ -1,3 +1,7 @@
+### Getting all resources in the namespace
+
+    $ kubectl get all -o name
+
 ### Pods
 
 ##### Using kubectl explain to discover possible API object fields
@@ -129,3 +133,7 @@ Without deleting the associated pods
 ### Changing Namespace in the context for all subsequent requests
 
     $ kubectl config set-context --current --namespace=<insert-namespace-name-here>
+
+### StatefulSet.apps
+
+    $kubectl get statefulset.apps
