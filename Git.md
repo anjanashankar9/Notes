@@ -31,3 +31,14 @@ Reference: https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
 <external 1p packages, like go-common>
 <space>
 <internal 1p packages, like skywalker-reporter>
+
+### GPG Signing error
+> error: gpg failed to sign the data<br>
+> fatal: failed to write commit object
+
+Solution: Kill and restart the gpg agent
+```shell
+killall gpg-agent
+gpg-agent --daemon
+git commit -m "try committing again"
+```

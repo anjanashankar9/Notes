@@ -137,3 +137,7 @@ Without deleting the associated pods
 ### StatefulSet.apps
 
     $kubectl get statefulset.apps
+
+### References
+
+[Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
