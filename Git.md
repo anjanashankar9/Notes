@@ -22,16 +22,6 @@ Reference: https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
 
     git push
 
-    
-#### Standard for importing packages
-<standard lib packages>
-<space>
-<3p packages>
-<space>
-<external 1p packages, like go-common>
-<space>
-<internal 1p packages, like skywalker-reporter>
-
 ### GPG Signing error
 > error: gpg failed to sign the data<br>
 > fatal: failed to write commit object

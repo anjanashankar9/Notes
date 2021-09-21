@@ -138,6 +138,12 @@ Without deleting the associated pods
 
     $kubectl get statefulset.apps
 
+### Getting a shell to a running container
+
+```shell
+kubectl exec -n <namespace> --stdin --tty <pod-name> -- /bin/bash
+```
+
 ### References
 
 [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)

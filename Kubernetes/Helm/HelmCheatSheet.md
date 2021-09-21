@@ -1,0 +1,1 @@
+helm template waas waas > /Users/anjana.shankar/Documents/scratchpad/Notes/secure7/yaml/helm_test.yaml
