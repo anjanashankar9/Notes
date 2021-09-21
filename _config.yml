@@ -1,1 +1,12 @@
 theme: jekyll-theme-midnight
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+markdown: kramdown
+syntax_highlighter: rouge
+exclude:
+  - .idea/
+  - .gitignore
+  - vendor
